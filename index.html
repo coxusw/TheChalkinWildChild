@@ -1,1 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Business Name</title>
+  <meta name="description" content="Tap to view contact info, links, and about." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Cozy + clean font pairing -->
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <main class="wrap">
+    <section class="card">
+      <header class="hero">
+        <!-- Put your logo.png in the repo root -->
+        <img class="logo" src="./logo.png" alt="Business logo" />
+        <div class="titleblock">
+          <h1 class="brand">Your Business Name</h1>
+          <p class="tagline">Short tagline goes here (optional)</p>
+        </div>
+      </header>
+
+      <nav class="links" aria-label="Primary links">
+        <!-- Replace href values with your real links -->
+        <a class="btn" href="https://yourwebsite.com" target="_blank" rel="noopener">Website</a>
+        <a class="btn" href="https://www.facebook.com/yourpage" target="_blank" rel="noopener">Facebook</a>
+        <a class="btn" href="https://www.tiktok.com/@yourhandle" target="_blank" rel="noopener">TikTok</a>
+      </nav>
+
+      <section class="section">
+        <h2>About</h2>
+        <p>
+          Write a short “who you are / what you do” blurb here. Keep it to 2–4 lines so it feels clean on mobile.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Contact info</h2>
+
+        <div class="contact-grid">
+          <div class="contact-item">
+            <div class="label">Name</div>
+            <div class="value">Your Name</div>
+          </div>
+
+          <div class="contact-item">
+            <div class="label">Phone</div>
+            <div class="value">
+              <a href="tel:+11234567890">(123) 456-7890</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="label">Email</div>
+            <div class="value">
+              <a href="mailto:you@domain.com">you@domain.com</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="quick-actions" aria-label="Quick actions">
+          <!-- Optional quick actions -->
+          <a class="pill" href="tel:+11234567890">Call</a>
+          <a class="pill" href="sms:+11234567890">Text</a>
+          <a class="pill" href="mailto:you@domain.com">Email</a>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <span>© <span id="year"></span> Your Business Name</span>
+      </footer>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
 
