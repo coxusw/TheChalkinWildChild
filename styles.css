@@ -272,3 +272,10 @@ body{
   color: var(--text-muted);
 
 }
+.btn.vcard{
+  background: linear-gradient(90deg, var(--accent3), var(--accent2));
+}
+.btn.vcard:hover{
+  box-shadow: 0 0 22px rgba(167,139,250,0.45);
+}
+
