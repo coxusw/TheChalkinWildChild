@@ -3,12 +3,22 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+
   <title>The Chalkin Wild Child</title>
   <meta name="description" content="Tap to view contact info, links, and about." />
+
+  <!-- Link preview / social preview (important for texting the link) -->
+  <meta property="og:title" content="The Chalkin Wild Child" />
+  <meta property="og:description" content="Tap to view contact info, links, and about." />
+  <meta property="og:url" content="https://coxusw.github.io/TheChalkinWildChild/" />
+  <!-- IMPORTANT: spaces must be encoded as %20 -->
+  <meta property="og:image" content="https://coxusw.github.io/TheChalkinWildChild/TheChalkinWildChild%20logo.jpeg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Cozy + clean font pairing -->
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="./styles.css" />
 </head>
 
@@ -16,8 +26,9 @@
   <main class="wrap">
     <section class="card">
       <header class="hero">
-        <!-- Put your logo.png in the repo root -->
-        <img class="logo" src="TheChalkinWildChild logo.jpeg" alt="Business logo" />
+        <!-- Keep filename the same, but encode the space -->
+        <img class="logo" src="./TheChalkinWildChild%20logo.jpeg" alt="The Chalkin Wild Child logo" />
+
         <div class="titleblock">
           <h1 class="brand">The Chalkin Wild Child</h1>
           <p class="tagline">Hand Crafted Greatness</p>
@@ -25,18 +36,17 @@
       </header>
 
       <nav class="links" aria-label="Primary links">
-        <!-- Replace href values with your real links -->
         <a class="btn" href="https://www.thechalkinwildchild.com/" target="_blank" rel="noopener">Website</a>
         <a class="btn" href="https://www.facebook.com/TheChalkinWildChild/" target="_blank" rel="noopener">Facebook</a>
         <a class="btn" href="https://www.tiktok.com/@thechalkinwildchild" target="_blank" rel="noopener">TikTok</a>
-        <a class="btn vcard" href="./contact.vcf" download>Save Contact</a>
 
+        <a class="btn vcard" href="./contact.vcf" download>Save Contact</a>
       </nav>
 
       <section class="section">
         <h2>About</h2>
         <p>
-          TheChalkinWildChild is your source of Custom Apparel, Custom Crochet, and Hand Made Awesomeness!
+          The Chalkin Wild Child is your source of custom apparel, custom crochet, and handmade awesomeness!
         </p>
       </section>
 
@@ -52,20 +62,21 @@
           <div class="contact-item">
             <div class="label">Phone</div>
             <div class="value">
-              <a href="tel:+11234567890">(830) 955-0069</a>
+              <!-- FIXED: tel number now matches the displayed phone -->
+              <a href="tel:+18309550069">(830) 955-0069</a>
             </div>
           </div>
 
           <div class="contact-item">
             <div class="label">Email</div>
             <div class="value">
+              <!-- FIX THIS: replace with real email address -->
               <a href="mailto:you@domain.com">you@domain.com</a>
             </div>
           </div>
         </div>
 
         <div class="quick-actions" aria-label="Quick actions">
-          <!-- Optional quick actions -->
           <a class="pill" href="tel:+18309550069">Call</a>
           <a class="pill" href="sms:+18309550069">Text</a>
           <a class="pill" href="mailto:you@domain.com">Email</a>
@@ -73,7 +84,7 @@
       </section>
 
       <footer class="footer">
-        <span>© <span id="year"></span> Your Business Name</span>
+        <span>© <span id="year"></span> The Chalkin Wild Child</span>
       </footer>
     </section>
   </main>
@@ -83,4 +94,3 @@
   </script>
 </body>
 </html>
-
