@@ -77,6 +77,20 @@ body{
     0 0 40px rgba(6,182,212,0.15),
     0 0 80px rgba(167,139,250,0.10);
 
+  /* Upgrade: subtle entrance animation */
+  animation: fadeInUp .6s ease;
+
+}
+
+@keyframes fadeInUp{
+  from{
+    opacity:0;
+    transform:translateY(15px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
 }
 
 .hero{
@@ -88,6 +102,12 @@ body{
 
   margin-bottom:20px;
 
+}
+
+/* If you wrapped the logo in a link, this removes underlines */
+.hero a{
+  display:inline-flex;
+  border-radius:18px;
 }
 
 .logo{
@@ -164,7 +184,10 @@ body{
     var(--accent2)
   );
 
-  transition: all .25s ease;
+  transition: transform .18s ease, box-shadow .25s ease, filter .25s ease;
+
+  /* Upgrade: better tap behavior */
+  -webkit-tap-highlight-color: transparent;
 
 }
 
@@ -175,6 +198,23 @@ body{
   box-shadow:
     0 0 20px rgba(34,197,94,0.5);
 
+}
+
+/* Upgrade: glow on tap (mobile) + pressed feel */
+.btn:active{
+  transform: translateY(0px) scale(0.99);
+  filter: brightness(1.08);
+  box-shadow:
+    0 0 26px rgba(6,182,212,0.55),
+    0 0 46px rgba(167,139,250,0.25);
+}
+
+.btn.vcard{
+  background: linear-gradient(90deg, var(--accent3), var(--accent2));
+}
+
+.btn.vcard:hover{
+  box-shadow: 0 0 22px rgba(167,139,250,0.45);
 }
 
 .section{
@@ -189,6 +229,12 @@ body{
 
   color: var(--accent2);
 
+}
+
+.section p{
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin: 0;
 }
 
 .contact-item{
@@ -233,14 +279,15 @@ body{
 
 }
 
+/* FIX: center the bottom quick actions */
 .quick-actions{
   display:flex;
   gap:10px;
   margin-top:14px;
 
-  justify-content:center;   /* centers horizontally */
+  justify-content:center; /* centered */
   align-items:center;
-  flex-wrap:wrap;           /* keeps it clean on small screens */
+  flex-wrap:wrap;         /* wraps nicely on small screens */
 }
 
 .pill{
@@ -261,6 +308,31 @@ body{
 
   font-size:14px;
 
+  /* Upgrade: equal sizing + nice alignment */
+  min-width:80px;
+  text-align:center;
+
+  /* Upgrade: smooth glow/tap */
+  transition: transform .18s ease, box-shadow .25s ease, filter .25s ease;
+  -webkit-tap-highlight-color: transparent;
+
+}
+
+/* Subtle glow on hover */
+.pill:hover{
+  transform: translateY(-1px);
+  box-shadow:
+    0 0 18px rgba(167,139,250,0.45),
+    0 0 28px rgba(6,182,212,0.20);
+}
+
+/* Upgrade: glow on tap (mobile) */
+.pill:active{
+  transform: translateY(0px) scale(0.98);
+  filter: brightness(1.08);
+  box-shadow:
+    0 0 26px rgba(167,139,250,0.55),
+    0 0 46px rgba(6,182,212,0.25);
 }
 
 .footer{
@@ -272,10 +344,3 @@ body{
   color: var(--text-muted);
 
 }
-.btn.vcard{
-  background: linear-gradient(90deg, var(--accent3), var(--accent2));
-}
-.btn.vcard:hover{
-  box-shadow: 0 0 22px rgba(167,139,250,0.45);
-}
-
